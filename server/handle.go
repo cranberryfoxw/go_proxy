@@ -48,6 +48,7 @@ func handleConnection(c chan net.Conn, clientMap map[string]string) {
 				loginMutex.Lock()
 				loggedIn = true
 				loginMutex.Unlock()
+				log.Printf("[√] Client: %s login Success\n", loginMsg.ClientName)
 
 				// send ok
 				if _, err := conn.Write([]byte("OK")); err != nil {

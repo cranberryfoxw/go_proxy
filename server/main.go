@@ -26,7 +26,7 @@ func main() {
 	}
 	model := os.Args[1]
 
-	var ss basic.ProtocolHandler
+	var ss basic.ServerProtocolHandler
 	switch model {
 	case "server":
 		serverFlags := flag.NewFlagSet("server", flag.ExitOnError)

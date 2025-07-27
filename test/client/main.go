@@ -17,7 +17,7 @@ func main() {
 	}
 
 	// 连接TLS服务器
-	conn, err := tls.Dial("tcp", "127.0.0.1:8088", tlsConfig)
+	conn, err := tls.Dial("tcp", "127.0.0.1:8080", tlsConfig)
 	if err != nil {
 		log.Fatalf("连接服务器失败: %v", err)
 	}
@@ -67,4 +67,3 @@ func handleServerMessages(conn net.Conn) {
 		fmt.Printf("服务器: %s", message)
 	}
 }
-   
